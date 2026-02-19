@@ -24,7 +24,7 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller --onefile --windowed --name AimLite --icon="${{ github.workspace }}/aimlite.ico" aimlite.py
+          pyinstaller --onefile --windowed --name AimLite --icon=aimlite.ico aimlite.py
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
