@@ -412,7 +412,7 @@ class AimLiteApp:
 
         if self.current_map == "regular_flick":
             for _ in range(3):
-                self.targets.append(self._spawn_non_overlapping_target(self.targets, 30, cluster_scale=0.24))
+                self.targets.append(self._spawn_non_overlapping_target(self.targets, 30, cluster_scale=0.10))
         elif self.current_map == "small_flick":
             for _ in range(3):
                 self.targets.append(self._spawn_non_overlapping_target(self.targets, 16, cluster_scale=0.24))
