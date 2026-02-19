@@ -1,0 +1,34 @@
+{
+  "regular_flick": {
+    "score": 2738.0,
+    "shots": 311,
+    "hits": 280,
+    "acc": 90.03215434083602,
+    "game": "Counter-Strike 2",
+    "duration": 60
+  },
+  "small_flick": {
+    "score": 0.0,
+    "shots": 0,
+    "hits": 0,
+    "acc": 0.0,
+    "game": "-",
+    "duration": 0
+  },
+  "tracking": {
+    "score": 675.6320000000156,
+    "shots": 115,
+    "hits": 58,
+    "acc": 50.43478260869565,
+    "game": "Counter-Strike 2",
+    "duration": 60
+  },
+  "reaction": {
+    "score": 0.0,
+    "shots": 0,
+    "hits": 0,
+    "acc": 0.0,
+    "game": "-",
+    "duration": 0
+  }
+}

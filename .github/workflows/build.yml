@@ -1,0 +1,48 @@
+name: Build and Release EXE
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install pygame pyinstaller
+
+      - name: Build EXE
+        run: |
+          pyinstaller --onefile --windowed --name AimLite aim_trainer.py
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/AimLite.exe
+          name: AimLite ${{ github.ref_name }}
+          body: |
+            ## AimLite ${{ github.ref_name }}
+
+            **No Python required — just download and run.**
+
+            ### Download
+            👇 Click `AimLite.exe` below under Assets.
+
+            ### What's included
+            - All 4 training modes (Flick, Small Flick, Tracking, Reaction)
+            - Game-accurate sensitivity for CS2, Valorant, Marvel Rivals, R6 Siege, OW2
+            - Customizable crosshair
+            - Settings and scores saved locally next to the exe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
