@@ -14,6 +14,8 @@ Built with Python and pygame. No launcher, no account, no internet connection re
 
 👉 [Download AimLite.exe (latest release)](../../releases/latest)
 
+> **Windows SmartScreen warning:** Windows may show a "Windows protected your PC" popup the first time you run it. This happens to all unsigned executables from small developers — it does not mean the file is dangerous. Click **"More info"** → **"Run anyway"** to launch it. The source code is fully public and auditable above.
+
 ---
 
 ## Training Modes
@@ -57,7 +59,7 @@ If you'd rather run from source or you're on Linux/Mac:
 
 **Install and run**
 ```bash
-git clone https://github.com/naowastaken/AimLite.git
+git clone https://github.com/NaoWasTaken/AimLite.git
 cd AimLite
 pip install pygame
 python aim_trainer.py
