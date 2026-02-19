@@ -492,7 +492,7 @@ class AimLiteApp:
             for i, t in enumerate(self.targets):
                 if self._is_in_circle(shot_x, shot_y, t):
                     others = [x for idx, x in enumerate(self.targets) if idx != i]
-                    self.targets[i] = self._spawn_non_overlapping_target(others, radius, cluster_scale=0.24)
+                    self.targets[i] = self._spawn_non_overlapping_target(others, radius, cluster_scale=0.10)
                     self._register_hit(10.0)
                     hit = True
                     break
